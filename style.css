@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat";
+}
+
+.top {
+  height: 1024px;
+  background-image: url(img/fon1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.top__heading {
+  width: 788.778px;
+  color: #fff;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-top: 217px;
+  padding-bottom: 32px;
+}
+.top__text {
+  width: 481px;
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+  padding-bottom: 44px;
+}
+.top__button {
+  border-radius: 30px;
+  background: #9c0332;
+  width: 234.063px;
+  height: 48.603px;
+  flex-shrink: 0;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}/*# sourceMappingURL=style.css.map */
