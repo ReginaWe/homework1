@@ -8,8 +8,8 @@ body {
 }
 
 .center {
-  padding-left: calc(50% - 600px);
-  padding-right: calc(50% - 600px);
+  padding-left: calc(50% - 720px);
+  padding-right: calc(50% - 720px);
 }
 
 .top {
@@ -104,8 +104,4 @@ body {
   border-radius: 16px;
   width: 379px;
   height: 300px;
-}
-
-span.bold {
-  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */
