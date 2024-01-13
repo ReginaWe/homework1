@@ -18,7 +18,6 @@ body {
   background-position: center;
   background-size: cover;
   &__heading {
-    width: 788.778px;
     color: #fff;
     font-size: 64px;
     font-style: normal;
@@ -28,7 +27,6 @@ body {
     padding-bottom: 32px;
   }
   &__text {
-    width: 481px;
     color: #fff;
     font-size: 18px;
     font-style: normal;
@@ -58,17 +56,15 @@ body {
 
   &__product {
     display: grid;
-    grid-template-columns: repeat(12,1fr);
+    grid-template-columns: repeat(12, 1fr);
     padding-top: 128px;
     padding-bottom: 128px;
-  
   }
   &__content {
     position: relative;
     display: flex;
     height: 300px;
     grid-column: span 4;
-  
   }
   &__item {
     border-radius: 16px;
@@ -85,5 +81,5 @@ body {
     font-weight: 600;
     line-height: 32px;
   }
-
 }
+@import "mobile";

@@ -20,7 +20,6 @@ body {
   background-size: cover;
 }
 .top__heading {
-  width: 788.778px;
   color: #fff;
   font-size: 64px;
   font-style: normal;
@@ -30,7 +29,6 @@ body {
   padding-bottom: 32px;
 }
 .top__text {
-  width: 481px;
   color: #fff;
   font-size: 18px;
   font-style: normal;
@@ -83,4 +81,27 @@ body {
   font-style: normal;
   font-weight: 600;
   line-height: 32px;
+}
+
+@media (max-width: 767px) {
+  .center {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  .top__heading {
+    font-size: 32px;
+    text-align: center;
+  }
+  .top__text {
+    font-size: 14px;
+    text-align: center;
+  }
+  .top__button-1 {
+    display: flex;
+    justify-content: center;
+  }
+  .game__product {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
 }/*# sourceMappingURL=style.css.map */
