@@ -55,27 +55,27 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-.game__product {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   padding-top: 128px;
   padding-bottom: 128px;
+  gap: 32px;
 }
 .game__content {
   position: relative;
-  display: flex;
   height: 300px;
+  width: 377px;
   grid-column: span 4;
 }
 .game__item {
   border-radius: 16px;
   position: absolute;
+  width: 100%;
 }
 .game__name {
   position: absolute;
-  padding-left: 32px;
-  padding-top: 236px;
+  left: 32px;
+  bottom: 32px;
   color: #fff;
   font-size: 24px;
   font-style: normal;
@@ -100,8 +100,11 @@ body {
     display: flex;
     justify-content: center;
   }
-  .game__product {
+  .game {
     grid-template-columns: repeat(4, 1fr);
-    gap: 32px;
+    row-gap: 32px;
+  }
+  .game__content {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

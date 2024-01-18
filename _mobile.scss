@@ -19,9 +19,11 @@
   }
 
   .game {
-    &__product {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 32px;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 32px;
+
+    &__content {
+      width: 100%;
     }
   }
 }
