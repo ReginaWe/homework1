@@ -13,7 +13,7 @@ if (m > 0 && m < 10) {
   alert("Неверно");
 }
 
-let number = Number (prompt('Введите число'));
+let number = Number(prompt("Введите число"));
 let h = 120;
 let e = 80;
 
@@ -23,36 +23,36 @@ if (h > 100 || e > 100) {
   alert("Неверно");
 }
 
-let a = '2';
-let b = '3';
+let a = "2";
+let b = "3";
 a = Number(a);
 b = Number(b);
-alert(a+b);
+alert(a + b);
 
-let monthNumber = Number( prompt('Введите номер месяца'));
+let monthNumber = Number(prompt("Введите номер месяца"));
 switch (monthNumber) {
   case 12:
   case 1:
   case 2:
-    alert('зима');
+    alert("зима");
     break;
   case 3:
   case 4:
   case 5:
-    alert('весна');
+    alert("весна");
     break;
   case 6:
   case 7:
   case 8:
-    alert('лето');
+    alert("лето");
     break;
   case 9:
   case 10:
   case 11:
-    alert('осень');
+    alert("осень");
     break;
 
   default:
-    alert('monthNumber' > 13);
+    alert("monthNumber" > 13);
     break;
 }
