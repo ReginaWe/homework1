@@ -11,21 +11,37 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
   </head>
   <body>
     <section class="top center">
       <h1 class="top__heading">Добро пожаловать на мой сайт !</h1>
       <p class="top__text">
         Вам предстоит пройти несколько увлекательных игр. Если готов нажимай
-        <span class="bold">поехали</span> и <span class="bold">приступай</span>
+        <b>поехали</b> и <b>приступай</b>
       </p>
-      <button class="top__button">Поехали!</button>
+      <div class="top__button-1">
+        <button class="top__button">Поехали!</button>
+      </div>
     </section>
     <section class="game center">
-      <div class="game__product">
-        <a class="game__img game__img-1" href="#">Игра 1</a>
-        <a class="game__img game__img-2" href="#">Игра 2</a>
-        <a class="game__img game__img-3" href="#">Игра 3</a>
+      <div class="game__content">
+        <a href="#">
+          <img src="img/game1.jpg" alt="game" class="game__item" />
+          <div class="game__name">Игра 1</div></a
+        >
+      </div>
+      <div class="game__content">
+        <a href="#">
+          <img src="img/game2.jpg" alt="game" class="game__item" />
+          <div class="game__name">Игра 2</div></a
+        >
+      </div>
+      <div class="game__content">
+        <a href="#">
+          <img src="img/game3.jpg" alt="game" class="game__item" />
+          <div class="game__name">Игра 3</div></a
+        >
       </div>
     </section>
   </body>
