@@ -72,7 +72,6 @@ body {
 }
 .game__item {
   border-radius: 16px;
-  background: linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%), url(<path-to-image>), lightgray 50%/cover no-repeat;
   width: 100%;
 }
 .game__item:hover {
