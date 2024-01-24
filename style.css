@@ -48,6 +48,10 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  border: none;
+}
+.top__button:hover {
+  background: #EB443F;
 }
 
 .game {
@@ -63,14 +67,16 @@ body {
 }
 .game__content {
   position: relative;
-  height: 300px;
   width: 377px;
   grid-column: span 4;
 }
 .game__item {
   border-radius: 16px;
-  position: absolute;
+  background: linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%), url(<path-to-image>), lightgray 50%/cover no-repeat;
   width: 100%;
+}
+.game__item:hover {
+  border: 3px solid #44D2FF;
 }
 .game__name {
   position: absolute;
