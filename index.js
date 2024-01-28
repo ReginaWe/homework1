@@ -1,45 +1,87 @@
-let i = 0;
-for (i = 0; i<2; i++) {
-  alert('Привет');
-}
+// function min(a, b) {
+//   if (a > b) {
+//     return b;
 
-let b = 1;
-do {
-  alert(b);
-  b++;
-} while (b < 6);
+//   } else {
+//     return a;
+//   }
+// }
+// alert(8, 11);
 
-let c = 7;
-do {
-  alert(c);
-  c++
-} while (c < 23);
+// function evenNumber(c) {
+//   if (c % 2 == 0) {
+//     alert('Число четное');
+//   } else {
+//     alert('Число нечетное')
+//   }
+// }
+// evenNumber(11);
 
-const object = {
-  Коля : "200",
-  Вася : "300",
-  Петя : "400"
-}
-for (let key in object) {
-  alert(`${key} - зарплата ${object[key]} долларов`);
-}
+// let square = (d, e) => d**e;
+//   alert(square(3, 2));
 
-let n = 1000;
-let num = 0;
+// let square1 = (f, j) => {
+//   let result = f**j;
+//   return result;
+// }
+// alert(square1(8, 2));
 
-while (n >=50) {
-  n = n/2;
-  num++;
-}
-alert(num);
+// function youAge() {
+//   let age = Number(prompt(`Сколько Вам лет?`));
+//   if (age < 0) {
+//     alert(`Вы ввели неправильное значение`);
+//   } else if (age >= 0 && age <= 12) {
+//     alert(`Привет, друг!`);
+//   }
+//     else if (age >= 13) {
+//       alert(`Добро пожаловать!`);
+//   }
+// }
+// youAge();
 
-for (let day = 5; day < 31; day++) {
-  if (day === 5 || day === 12 || day === 19 || day === 26) {
-    alert(`Сегодня пятница, ${day}-е число. Необходимо подготовить отчет.`)
-  }
-  
-}
+здеь;
 
+// let i = 0;
+// for (i = 0; i<2; i++) {
+//   alert('Привет');
+// }
+
+// let b = 1;
+// do {
+//   alert(b);
+//   b++;
+// } while (b < 6);
+
+// let c = 7;
+// do {
+//   alert(c);
+//   c++
+// } while (c < 23);
+
+// const object = {
+//   Коля : "200",
+//   Вася : "300",
+//   Петя : "400"
+// }
+// for (let key in object) {
+//   alert(`${key} - зарплата ${object[key]} долларов`);
+// }
+
+// let n = 1000;
+// let num = 0;
+
+// while (n >=50) {
+//   n = n/2;
+//   num++;
+// }
+// alert(num);
+
+// for (let day = 5; day < 31; day++) {
+//   if (day === 5 || day === 12 || day === 19 || day === 26) {
+//     alert(`Сегодня пятница, ${day}-е число. Необходимо подготовить отчет.`)
+//   }
+
+// }
 
 // let password = "skypro";
 // let enterPassword = prompt("Введите пароль");

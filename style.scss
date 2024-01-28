@@ -48,7 +48,7 @@ body {
     line-height: normal;
     border: none;
     &:hover {
-      background: #EB443F;
+      background: #eb443f;
     }
   }
 }
@@ -72,7 +72,7 @@ body {
     border-radius: 16px;
     width: 100%;
     &:hover {
-      border: 3px solid #44D2FF;
+      border: 3px solid #44d2ff;
     }
   }
 
@@ -85,6 +85,61 @@ body {
     font-style: normal;
     font-weight: 600;
     line-height: 32px;
+  }
+}
+
+.seasons {
+  background-image: url(img/fon3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+
+  &__block {
+    display: flex;
+    padding-top: 282px;
+    padding-bottom: 282px;
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-right: 135px;
+    
+  }
+  &__heading {
+    color: #fff;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  &__text {
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 32px;
+  }
+  &__button {
+    border-radius: 30px;
+    background: #9c0332;
+    width: 234.063px;
+    height: 48.603px;
+    flex-shrink: 0;
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: none;
+    &:hover {
+      background: #eb443f;
+    }
+  }
+  &__img {
+    width: 100%;
+  
   }
 }
 @import "mobile";
