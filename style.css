@@ -135,6 +135,7 @@ body {
 .seasons__button:hover {
   background: #eb443f;
 }
+
 @media (max-width: 767px) {
   .center {
     padding-right: 16px;
