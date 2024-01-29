@@ -19,6 +19,10 @@ body {
   background-position: center;
   background-size: cover;
 }
+.top__box {
+  display: flex;
+  flex-direction: column;
+}
 .top__heading {
   color: #fff;
   font-size: 64px;
@@ -27,6 +31,7 @@ body {
   line-height: normal;
   padding-top: 217px;
   padding-bottom: 32px;
+  width: 789px;
 }
 .top__text {
   color: #fff;
@@ -35,6 +40,7 @@ body {
   font-weight: 300;
   line-height: 32px;
   padding-bottom: 44px;
+  width: 481px;
 }
 .top__button {
   border-radius: 30px;
@@ -141,17 +147,18 @@ body {
     padding-right: 16px;
     padding-left: 16px;
   }
+  .top__box {
+    align-items: center;
+  }
   .top__heading {
     font-size: 32px;
     text-align: center;
+    width: auto;
   }
   .top__text {
     font-size: 14px;
     text-align: center;
-  }
-  .top__button-1 {
-    display: flex;
-    justify-content: center;
+    width: auto;
   }
   .game {
     grid-template-columns: repeat(4, 1fr);

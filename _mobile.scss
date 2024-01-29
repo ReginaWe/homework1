@@ -4,17 +4,18 @@
     padding-left: 16px;
   }
   .top {
+    &__box {
+      align-items: center;
+    }
     &__heading {
       font-size: 32px;
       text-align: center;
+      width: auto;
     }
     &__text {
       font-size: 14px;
       text-align: center;
-    }
-    &__button-1 {
-      display: flex;
-      justify-content: center;
+      width: auto;
     }
   }
 
@@ -28,10 +29,8 @@
   }
 
   .seasons {
-  
-    
     &__box {
-    align-items: center;
+      align-items: center;
     }
 
     &__heading {
@@ -44,8 +43,7 @@
       width: auto;
     }
     &__img {
-      width: 100%;;
+      width: 100%;
     }
-    
   }
 }
