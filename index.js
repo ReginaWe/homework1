@@ -1,45 +1,102 @@
-// function min(a, b) {
-//   if (a > b) {
-//     return b;
+function min(a, b) {
+  if (a > b) {
+    return b;
+  } else {
+    return a;
+  }
+}
+alert(8, 11);
 
-//   } else {
-//     return a;
-//   }
-// }
-// alert(8, 11);
+function evenNumber(c) {
+  if (c % 2 == 0) {
+    alert("Число четное");
+  } else {
+    alert("Число нечетное");
+  }
+}
+evenNumber(11);
 
-// function evenNumber(c) {
-//   if (c % 2 == 0) {
-//     alert('Число четное');
-//   } else {
-//     alert('Число нечетное')
-//   }
-// }
-// evenNumber(11);
+let square = (d, e) => d ** e;
+alert(square(3, 2));
 
-// let square = (d, e) => d**e;
-//   alert(square(3, 2));
+let square1 = (f, j) => {
+  let result = f ** j;
+  return result;
+};
+alert(square1(8, 2));
 
-// let square1 = (f, j) => {
-//   let result = f**j;
-//   return result;
-// }
-// alert(square1(8, 2));
+function youAge() {
+  let age = Number(prompt(`Сколько Вам лет?`));
+  if (age < 0) {
+    alert(`Вы ввели неправильное значение`);
+  } else if (age >= 0 && age <= 12) {
+    alert(`Привет, друг!`);
+  } else if (age >= 13) {
+    alert(`Добро пожаловать!`);
+  }
+}
+youAge();
 
-// function youAge() {
-//   let age = Number(prompt(`Сколько Вам лет?`));
-//   if (age < 0) {
-//     alert(`Вы ввели неправильное значение`);
-//   } else if (age >= 0 && age <= 12) {
-//     alert(`Привет, друг!`);
-//   }
-//     else if (age >= 13) {
-//       alert(`Добро пожаловать!`);
-//   }
-// }
-// youAge();
+let h = Number(prompt(`Введите первое число`));
+let i = Number(prompt(`Введите второе число`));
+function exampl(h, i) {
+  if (isNaN(h) || isNaN(i)) {
+    return "Одно или оба значения не являются числом";
+  } else {
+    return h * i;
+  }
+}
+alert(exampl(h, i));
 
-здеь;
+let n = Number(prompt(`Введите число`));
+function cube(n) {
+  if (isNaN(n)) {
+    return "Переданный параметр не является числом";
+  } else {
+    return Math.pow(n, 3);
+  }
+}
+alert(cube(n));
+
+function getCircleArea() {
+  return this.radius ** 2 * 3.14;
+}
+
+function getCirclePerimeter() {
+  return this.radius * 3.14;
+}
+
+let circle1 = {
+  radius: 10,
+  getArea: getCircleArea,
+  getPerimeter: getCirclePerimeter,
+};
+
+let circle2 = {
+  radius: 5,
+  getArea: getCircleArea,
+  getPerimeter: getCirclePerimeter,
+};
+
+alert(circle1.getArea());
+alert(circle1.getPerimeter());
+alert(circle2.getArea());
+alert(circle2.getPerimeter());
+
+function month() {
+  let monthNumber = Number(prompt("Введите номер месяца"));
+  if (monthNumber === 12 || monthNumber === 1 || monthNumber === 2) {
+    alert(`Зима`);
+  } else if (monthNumber === 3 || monthNumber === 4 || monthNumber === 5) {
+    alert(`Весна`);
+  } else if (monthNumber === 6 || monthNumber === 7 || monthNumber === 8) {
+    alert(`Лето`);
+  } else if (monthNumber === 9 || monthNumber === 10 || monthNumber === 11) {
+    alert(`Осень`);
+  } else if (monthNumber >= 13) {
+    alert(`Такого месяца нет `);
+  }
+}
 
 // let i = 0;
 // for (i = 0; i<2; i++) {
