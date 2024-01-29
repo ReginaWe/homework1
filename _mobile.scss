@@ -28,13 +28,10 @@
   }
 
   .seasons {
-    &__block {
-      display: flex;
-      flex-direction: column;
-      gap: 64px;
-    }
+  
+    
     &__box {
-      padding-right: 0;
+    align-items: center;
     }
 
     &__heading {
@@ -44,10 +41,10 @@
     &__text {
       text-align: center;
       font-size: 14px;
+      width: auto;
     }
-    &__button-1 {
-      display: flex;
-      justify-content: center;
+    &__img {
+      width: 100%;;
     }
     
   }
