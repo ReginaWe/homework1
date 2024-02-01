@@ -8,7 +8,7 @@ function min(a, b) {
 alert(8, 11);
 
 function evenNumber(c) {
-  if (c % 2 == 0) {
+  if (c % 2 === 0) {
     alert("Число четное");
   } else {
     alert("Число нечетное");
@@ -16,14 +16,15 @@ function evenNumber(c) {
 }
 evenNumber(11);
 
-let square = (d, e) => d ** e;
-alert(square(3, 2));
-
-let square1 = (f, j) => {
-  let result = f ** j;
-  return result;
+let square = function (d) {
+  alert(d ** 2);
 };
-alert(square1(8, 2));
+square(3);
+
+let square1 = function (e) {
+  alert(e ** 2);
+};
+square1(3);
 
 function youAge() {
   let age = Number(prompt(`Сколько Вам лет?`));
@@ -33,6 +34,8 @@ function youAge() {
     alert(`Привет, друг!`);
   } else if (age >= 13) {
     alert(`Добро пожаловать!`);
+  } else if ((age = " ")) {
+    alert(`Некорректное значение`);
   }
 }
 youAge();
@@ -48,22 +51,23 @@ function exampl(h, i) {
 }
 alert(exampl(h, i));
 
-let n = Number(prompt(`Введите число`));
-function cube(n) {
-  if (isNaN(n)) {
+let cubeNumber = function () {
+  let number = prompt(`Введите число`);
+
+  if (isNaN(number)) {
     return "Переданный параметр не является числом";
   } else {
-    return Math.pow(n, 3);
+    return Math.pow(number, 3);
   }
-}
-alert(cube(n));
+};
+alert(cubeNumber());
 
 function getCircleArea() {
-  return this.radius ** 2 * 3.14;
+  return this.radius ** 2 * Math.PI;
 }
 
 function getCirclePerimeter() {
-  return this.radius * 3.14;
+  return 2 * this.radius * Math.PI;
 }
 
 let circle1 = {
