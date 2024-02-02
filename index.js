@@ -34,9 +34,7 @@ function youAge() {
     alert(`Привет, друг!`);
   } else if (age >= 13) {
     alert(`Добро пожаловать!`);
-  } else if (age === ' ') {
-    alert(`Некорректное значение`);
-  }
+  } 
 }
 youAge();
 
