@@ -17,12 +17,12 @@ function evenNumber(c) {
 evenNumber(11);
 
 let square = function (d) {
-  alert(d ** 2);
+  console.log(d ** 2);
 };
 square(3);
 
 let square1 = function (e) {
-  alert(e ** 2);
+  return e ** 2;
 };
 square1(3);
 
@@ -34,7 +34,7 @@ function youAge() {
     alert(`Привет, друг!`);
   } else if (age >= 13) {
     alert(`Добро пожаловать!`);
-  } else if ((age = " ")) {
+  } else if (age === ' ') {
     alert(`Некорректное значение`);
   }
 }
