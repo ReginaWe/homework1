@@ -1,0 +1,49 @@
+@media (max-width: 767px) {
+  .center {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  .top {
+    &__box {
+      align-items: center;
+    }
+    &__heading {
+      font-size: 32px;
+      text-align: center;
+      width: auto;
+    }
+    &__text {
+      font-size: 14px;
+      text-align: center;
+      width: auto;
+    }
+  }
+
+  .game {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 32px;
+
+    &__content {
+      width: 100%;
+    }
+  }
+
+  .seasons {
+    &__box {
+      align-items: center;
+    }
+
+    &__heading {
+      text-align: center;
+      font-size: 32px;
+    }
+    &__text {
+      text-align: center;
+      font-size: 14px;
+      width: auto;
+    }
+    &__img {
+      width: 100%;
+    }
+  }
+}
