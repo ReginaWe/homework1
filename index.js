@@ -1,89 +1,181 @@
-function min(a, b) {
-  if (a > b) {
-    return b;
-  } else {
-    return a;
+// Задание 1
+const numbs = [1, 5, 4, 10, 0, 3];
+for (let i = 0; i < numbs.length; i++) {
+  if (numbs[i] == 0) break;
+  console.log(numbs[i]);
+}
+// Задание 2
+const num = [1, 5, 4, 10, 0, 3];
+num.forEach((el, index) => {
+  console.log(`${index} : ${el}`);
+});
+// Задание 3
+let numbers = [1, 3, 5, 10, 20];
+numbers = numbers.join(" ");
+console.log(numbers);
+
+// Задание 4
+const arr = [];
+for (let i = 0; i < 3; i++) {
+  arr[i] = [];
+  for (let j = 0; j < 3; j++) {
+    arr[i][j] = 1;
   }
 }
-alert(8, 11);
+console.log(arr);
 
-function evenNumber(c) {
-  if (c % 2 === 0) {
-    alert("Число четное");
-  } else {
-    alert("Число нечетное");
+// Задание 5
+let numb = [1, 1, 1];
+numb.push(2, 2, 2);
+console.log(numb);
+
+// Задание 6
+let a = [9, 8, 7, "a", 6, 5];
+a = a.sort();
+a.pop();
+console.log(a);
+
+// Задание 7
+const b = [9, 8, 7, 6, 5];
+if (b.includes(Number(prompt(`Угадайте число`)))) {
+  alert(`Угадал`);
+} else {
+  alert(`Не угадал`);
+}
+
+// Задание 8
+const stroke = "abcdef";
+const revStroke = stroke.split("").reverse().join("");
+console.log(revStroke);
+
+// Задание 9
+const c = [
+  [1, 2, 3],
+  [4, 5, 6],
+];
+const flat = c.flat();
+console.log(flat);
+
+// Задание 10
+const f = [5, 2, 4, 5, 4, 6];
+for (let i = 0; i < f.length - 1; i++) {
+  console.log(f[i] + f[i + 1]);
+}
+
+// Задание 11
+const newArr = [2, 4, 1];
+let result = newArr.map((item) => item ** 2);
+console.log(result);
+
+// Задание 12
+function word(arm) {
+  for (let i = 0; i < arm.length; i++) {
+    console.log(arm[i].length);
   }
 }
-evenNumber(11);
+word(["слово", "", "слог", "длинное предложение", "буква"]);
 
-let square = function (d) {
-  console.log(d ** 2);
-};
-square(3);
-
-let square1 = function (e) {
-  return e ** 2;
-};
-square1(3);
-
-function youAge() {
-  let age = Number(prompt(`Сколько Вам лет?`));
-  if (age < 0) {
-    alert(`Вы ввели неправильное значение`);
-  } else if (age >= 0 && age <= 12) {
-    alert(`Привет, друг!`);
-  } else if (age >= 13) {
-    alert(`Добро пожаловать!`);
-  } 
-}
-youAge();
-
-let h = Number(prompt(`Введите первое число`));
-let i = Number(prompt(`Введите второе число`));
-function exampl(h, i) {
-  if (isNaN(h) || isNaN(i)) {
-    return "Одно или оба значения не являются числом";
-  } else {
-    return h * i;
+// Задание 13
+function filterPositive(array) {
+  const arr = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] < 0) {
+      arr.push(array[i]);
+    }
   }
+  return arr;
 }
-alert(exampl(h, i));
+console.log(filterPositive([-1, 0, 5, -10, 56]));
+console.log(filterPositive([-25, 25, 0, -1000, -2]));
 
-let cubeNumber = function () {
-  let number = prompt(`Введите число`);
+// function min(a, b) {
+//   if (a > b) {
+//     return b;
+//   } else {
+//     return a;
+//   }
+// }
+// alert(8, 11);
 
-  if (isNaN(number)) {
-    return "Переданный параметр не является числом";
-  } else {
-    return Math.pow(number, 3);
-  }
-};
-alert(cubeNumber());
+// function evenNumber(c) {
+//   if (c % 2 === 0) {
+//     alert("Число четное");
+//   } else {
+//     alert("Число нечетное");
+//   }
+// }
+// evenNumber(11);
 
-function getCircleArea() {
-  return this.radius ** 2 * Math.PI;
-}
+// let square = function (d) {
+//   console.log(d ** 2);
+// };
+// square(3);
 
-function getCirclePerimeter() {
-  return 2 * this.radius * Math.PI;
-}
+// let square1 = function (e) {
+//   return e ** 2;
+// };
+// square1(3);
 
-let circle1 = {
-  radius: 10,
-  getArea: getCircleArea,
-  getPerimeter: getCirclePerimeter,
-};
+// function youAge() {
 
-let circle2 = {
-  radius: 5,
-  getArea: getCircleArea,
-  getPerimeter: getCirclePerimeter,
-};
+//   let age = Number(prompt(`Сколько Вам лет?`));
 
-alert(circle1.getArea());
-alert(circle1.getPerimeter());
-alert(circle2.getArea());
-alert(circle2.getPerimeter());
+//     if (age <= 0) {
+//     alert(`Вы ввели неправильное значение`);
+//   } else if (age > 0 && age <= 12) {
+//     alert(`Привет, друг!`);
+//   } else if (age >= 13) {
+//     alert(`Добро пожаловать!`);
+//   }
+// }
+// youAge();
+
+// let h = prompt(`Введите первое число`);
+// let i = prompt(`Введите второе число`);
+// function exampl(h, i) {
+//   if (h === " " || h === "" || i === " " || i === ""  || isNaN(h) || isNaN(i)) {
+//     return "Одно или оба значения не являются числом";
+//   } else {
+//     return Number(h) * Number(i) ;
+//   }
+// }
+// alert(exampl(h, i));
+
+// let cubeNumber = function () {
+//   let number = prompt(`Введите число`);
+
+//   if (isNaN(number)) {
+//     return "Переданный параметр не является числом";
+//   } else {
+//     return Math.pow(number, 3);
+//   }
+// };
+// alert(cubeNumber());
+
+// function getCircleArea() {
+//   return this.radius ** 2 * Math.PI;
+// }
+
+// function getCirclePerimeter() {
+//   return 2 * this.radius * Math.PI;
+// }
+
+// let circle1 = {
+//   radius: 10,
+//   getArea: getCircleArea,
+//   getPerimeter: getCirclePerimeter,
+// };
+
+// let circle2 = {
+//   radius: 5,
+//   getArea: getCircleArea,
+//   getPerimeter: getCirclePerimeter,
+// };
+
+// alert(circle1.getArea());
+// alert(circle1.getPerimeter());
+// alert(circle2.getArea());
+// alert(circle2.getPerimeter());
 
 function month() {
   let monthNumber = Number(prompt("Введите номер месяца"));
