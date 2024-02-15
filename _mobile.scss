@@ -46,4 +46,24 @@
       width: 100%;
     }
   }
+
+  .memory {
+    justify-content: space-around;
+    flex-direction: column-reverse;
+    &__box {
+      align-items: center;
+    }
+    &__heading {
+      text-align: center;
+      font-size: 32px;
+    }
+    &__text {
+      text-align: center;
+      font-size: 14px;
+      width: auto;
+    }
+    &__img {
+      width: 100%;
+    }
+  }
 }
