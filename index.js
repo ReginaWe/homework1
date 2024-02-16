@@ -1,4 +1,6 @@
 // Задание 1
+
+// Задание 1
 let strJs = "js";
 console.log(strJs.toUpperCase());
 
@@ -36,7 +38,7 @@ function getRandom(n) {
   let i = n / 2;
   i = Math.floor(i);
   for (let index = 0; index < i; index++) {
-    alert = arr.push(Math.round(Math.random() * n));
+    arr.push(Math.round(Math.random() * n));
   }
   console.log(arr);
 }
@@ -123,18 +125,23 @@ function fruits() {
   fruitsArr = fruitsArr.sort(() => Math.random() - 0.5);
   alert(fruitsArr);
 
-  let answer1 = prompt(`Какой фрукт был первым?`);
-  let answer2 = prompt(`Какой фрукт был последним?`);
+  let answer1 = prompt(`Какой фрукт был первым?`).toLowerCase();
+  let answer2 = prompt(`Какой фрукт был последним?`).toLowerCase();
 
-  if (answer1 === fruitsArr.indexOf[0] && answer2 === fruitsArr.indexOf[6]) {
+  if (
+    answer1 === fruitsArr[0].toLowerCase() &&
+    answer2 === fruitsArr[fruitsArr.length - 1].toLowerCase()
+  ) {
     alert(`Поздравляю! Вы угадали`);
   } else if (
-    answer1 !== fruitsArr.indexOf[0] ||
-    answer2 !== fruitsArr.indexOf[6]
+    (answer1 !== fruitsArr[0].toLowerCase() &&
+      answer2 === fruitsArr[fruitsArr.length - 1].toLowerCase()) ||
+    (answer1 === fruitsArr[0].toLowerCase() &&
+      answer2 !== fruitsArr[fruitsArr.length - 1].toLowerCase())
   ) {
-    alert(`Вы не угадали`);
-  } else {
     alert(`Вы были близки к победе!`);
+  } else {
+    alert(`Вы не угадали`);
   }
 }
 // Игра 1
