@@ -17,8 +17,12 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+  }
   &__heading {
-    width: 788.778px;
     color: #fff;
     font-size: 64px;
     font-style: normal;
@@ -26,15 +30,16 @@ body {
     line-height: normal;
     padding-top: 217px;
     padding-bottom: 32px;
+    width: 789px;
   }
   &__text {
-    width: 481px;
     color: #fff;
     font-size: 18px;
     font-style: normal;
     font-weight: 300;
     line-height: 32px;
     padding-bottom: 44px;
+    width: 481px;
   }
   &__button {
     border-radius: 30px;
@@ -48,68 +53,138 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    border: none;
+    &:hover {
+      background: #eb443f;
+    }
   }
 }
 .game {
-  height: 556px;
   background-image: url(img/fon2.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding-top: 128px;
+  padding-bottom: 128px;
+  gap: 32px;
 
-  &__product {
-    display: flex;
-    gap: 32px;
-    padding-top: 128px;
-    padding-bottom: 128px;
-  
+  &__content {
+    position: relative;
+    width: 377px;
+    grid-column: span 4;
+  }
+  &__item {
+    border-radius: 16px;
+    width: 100%;
+    &:hover {
+      border: 3px solid #44d2ff;
+    }
   }
 
-  &__img {
+  &__name {
+    position: absolute;
+    left: 32px;
+    bottom: 32px;
     color: #fff;
-    font-family: Montserrat;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
-    line-height: 32px; /* 133.333% */
-    display: grid;
-    align-items: end;
-    padding-left: 32px;
-    padding-bottom: 32px;
-    text-decoration: none;
-
-  }
-
-  &__img-1 {
-    background-image: url(img/game1.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 16px;
-    width: 379px;
-    height: 300px;
-  
-  }
-
-  &__img-2 {
-    background-image: url(img/game2.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 16px;
-    width: 379px;
-    height: 300px;
-  }
-  &__img-3 {
-    background-image: url(img/game3.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 16px;
-    width: 379px;
-    height: 300px;
+    line-height: 32px;
   }
 }
-span.bold {
-  font-weight: 700;
+
+.seasons {
+  background-image: url(img/fon3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  &__heading {
+    color: #fff;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  &__text {
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 32px;
+    width: 584px;
+  }
+  &__button {
+    border-radius: 30px;
+    background: #9c0332;
+    width: 234.063px;
+    height: 48.603px;
+    flex-shrink: 0;
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: none;
+    &:hover {
+      background: #eb443f;
+    }
+  }
 }
+
+.memory {
+  background-image: url(img/fon4.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  &__heading {
+    color: rgb(255, 255, 255);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 59px;
+  }
+  &__text {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 32px;
+    width: 588px;
+  }
+  &__button {
+    border-radius: 30px;
+    background: rgb(156, 3, 50);
+    width: 240.44px;
+    height: 48.6px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    border: none;
+    &:hover {
+      background: #eb443f;
+    }
+  }
+}
+@import "mobile";

@@ -19,8 +19,11 @@ body {
   background-position: center;
   background-size: cover;
 }
+.top__box {
+  display: flex;
+  flex-direction: column;
+}
 .top__heading {
-  width: 788.778px;
   color: #fff;
   font-size: 64px;
   font-style: normal;
@@ -28,15 +31,16 @@ body {
   line-height: normal;
   padding-top: 217px;
   padding-bottom: 32px;
+  width: 789px;
 }
 .top__text {
-  width: 481px;
   color: #fff;
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
   line-height: 32px;
   padding-bottom: 44px;
+  width: 481px;
 }
 .top__button {
   border-radius: 30px;
@@ -50,62 +54,195 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  border: none;
+}
+.top__button:hover {
+  background: #eb443f;
 }
 
 .game {
-  height: 556px;
   background-image: url(img/fon2.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-.game__product {
-  display: flex;
-  gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   padding-top: 128px;
   padding-bottom: 128px;
+  gap: 32px;
 }
-.game__img {
+.game__content {
+  position: relative;
+  width: 377px;
+  grid-column: span 4;
+}
+.game__item {
+  border-radius: 16px;
+  width: 100%;
+}
+.game__item:hover {
+  border: 3px solid #44d2ff;
+}
+.game__name {
+  position: absolute;
+  left: 32px;
+  bottom: 32px;
   color: #fff;
-  font-family: Montserrat;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 32px; /* 133.333% */
-  display: grid;
-  align-items: end;
-  padding-left: 32px;
-  padding-bottom: 32px;
-  text-decoration: none;
-}
-.game__img-1 {
-  background-image: url(img/game1.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 16px;
-  width: 379px;
-  height: 300px;
-}
-.game__img-2 {
-  background-image: url(img/game2.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 16px;
-  width: 379px;
-  height: 300px;
-}
-.game__img-3 {
-  background-image: url(img/game3.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 16px;
-  width: 379px;
-  height: 300px;
+  line-height: 32px;
 }
 
-span.bold {
+.seasons {
+  background-image: url(img/fon3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.seasons__box {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.seasons__heading {
+  color: #fff;
+  font-size: 48px;
+  font-style: normal;
   font-weight: 700;
+  line-height: normal;
+}
+.seasons__text {
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+  width: 584px;
+}
+.seasons__button {
+  border-radius: 30px;
+  background: #9c0332;
+  width: 234.063px;
+  height: 48.603px;
+  flex-shrink: 0;
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+}
+.seasons__button:hover {
+  background: #eb443f;
+}
+
+.memory {
+  background-image: url(img/fon4.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.memory__box {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.memory__heading {
+  color: rgb(255, 255, 255);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59px;
+}
+.memory__text {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 32px;
+  width: 588px;
+}
+.memory__button {
+  border-radius: 30px;
+  background: rgb(156, 3, 50);
+  width: 240.44px;
+  height: 48.6px;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  border: none;
+}
+.memory__button:hover {
+  background: #eb443f;
+}
+
+@media (max-width: 767px) {
+  .center {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  .top__box {
+    align-items: center;
+  }
+  .top__heading {
+    font-size: 32px;
+    text-align: center;
+    width: auto;
+  }
+  .top__text {
+    font-size: 14px;
+    text-align: center;
+    width: auto;
+  }
+  .game {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 32px;
+  }
+  .game__content {
+    width: 100%;
+  }
+  .seasons__box {
+    align-items: center;
+  }
+  .seasons__heading {
+    text-align: center;
+    font-size: 32px;
+  }
+  .seasons__text {
+    text-align: center;
+    font-size: 14px;
+    width: auto;
+  }
+  .seasons__img {
+    width: 100%;
+  }
+  .memory {
+    justify-content: space-around;
+    flex-direction: column-reverse;
+  }
+  .memory__box {
+    align-items: center;
+  }
+  .memory__heading {
+    text-align: center;
+    font-size: 32px;
+  }
+  .memory__text {
+    text-align: center;
+    font-size: 14px;
+    width: auto;
+  }
+  .memory__img {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
