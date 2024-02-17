@@ -1,4 +1,13 @@
 // Задание 1
+// Задача: Создайте интервал с помощью setInterval, который выводит число, начиная с 1 и увеличивается каждую секунду. Остановите интервал, когда число достигнет 5.
+// let time = 1;
+// const interval = setInterval(() => {
+//   time += 1;
+//   console.log(time);
+//   if (time > 5) {
+//     clearInterval(interval);
+//   }
+// }, 1000);
 
 // Задание 1
 let strJs = "js";
@@ -6,7 +15,9 @@ console.log(strJs.toUpperCase());
 
 // Задание 2
 function searchStart(arr, str) {
-  return arr.filter((el) => el.toLowerCase(str).startsWith(str));
+  return arr.filter((el) =>
+    el.toLowerCase(str.toLowerCase()).startsWith(str.toLowerCase())
+  );
 }
 console.log(searchStart(["Кошка", "Кит", "Комар", "Носорог"], "ко"));
 console.log(searchStart(["яблоко", "груша", "гриб", "огурец"], "гру"));
@@ -27,10 +38,12 @@ console.log(Math.max(...numbers));
 console.log(Math.min(...numbers));
 
 // Задание 5
-function numRand() {
-  return Math.floor(Math.random(numRand) * 10);
+function numRand(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-console.log(numRand());
+console.log(numRand(1, 10));
 
 // Задание 6
 function getRandom(n) {
@@ -71,18 +84,18 @@ const days = [
   "Суббота",
 ];
 const months = [
-  "Январь",
-  "Февраль",
-  "Март",
-  "Апрель",
-  "Май",
-  "Июнь",
-  "Июль",
-  "Август",
-  "Сентябрь",
-  "Октябрь",
-  "Ноябрь",
-  "Декабрь",
+  "Января",
+  "Февраля",
+  "Марта",
+  "Апреля",
+  "Мая",
+  "Июня",
+  "Июля",
+  "Августа",
+  "Сентября",
+  "Октября",
+  "Ноября",
+  "Декабря",
 ];
 let myDate = new Date();
 let hour = myDate.getHours();
@@ -125,8 +138,8 @@ function fruits() {
   fruitsArr = fruitsArr.sort(() => Math.random() - 0.5);
   alert(fruitsArr);
 
-  let answer1 = prompt(`Какой фрукт был первым?`).toLowerCase();
-  let answer2 = prompt(`Какой фрукт был последним?`).toLowerCase();
+  let answer1 = prompt(`Какой фрукт был первым?`);
+  let answer2 = prompt(`Какой фрукт был последним?`);
 
   if (
     answer1 === fruitsArr[0].toLowerCase() &&
