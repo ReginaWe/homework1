@@ -1,4 +1,84 @@
+// дз 2.8
 // Задание 1
+const people = [
+  { name: "Глеб", age: 29 },
+  { name: "Анна", age: 17 },
+  { name: "Олег", age: 7 },
+  { name: "Оксана", age: 47 },
+];
+console.log(
+  people.sort(function (a, b) {
+    return a.age - b.age;
+  })
+);
+
+// Задание 2
+function isPositive(number) {
+  return number > 0;
+}
+function isMale(item) {
+  return item.gender === "male";
+}
+function filter(arr, ruleFunction) {
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (ruleFunction(arr[i])) {
+      newArray.push(arr[i]);
+    }
+  }
+  return newArray;
+}
+
+console.log(filter([3, -4, 1, 9], isPositive));
+
+const people2 = [
+  { name: "Глеб", gender: "male" },
+  { name: "Анна", gender: "female" },
+  { name: "Олег", gender: "male" },
+  { name: "Оксана", gender: "female" },
+];
+
+console.log(filter(people2, isMale));
+
+// Задание 3
+const timer = () => {
+  const interval = setInterval(() => {
+    console.log(new Date());
+  }, 3000);
+  setTimeout(() => {
+    clearInterval(interval);
+    console.log("30 секунд прошло");
+  }, 30000);
+};
+timer(10);
+
+// Задание 4
+function delayForSecond(callback) {
+  setTimeout(() => {
+    callback();
+  }, 1000);
+}
+
+delayForSecond(function () {
+  console.log("Привет, Глеб!");
+});
+
+// Задание 5
+function delayForSecond(cb) {
+  setTimeout(() => {
+    console.log("Прошла одна секунда");
+    if (cb) {
+      cb();
+    }
+  }, 1000);
+}
+
+function sayHi(name) {
+  console.log(`Привет, ${name}!`);
+}
+
+delayForSecond(() => sayHi("Глеб"));
+
 // Задача: Создайте интервал с помощью setInterval, который выводит число, начиная с 1 и увеличивается каждую секунду. Остановите интервал, когда число достигнет 5.
 // let time = 1;
 // const interval = setInterval(() => {
@@ -9,15 +89,14 @@
 //   }
 // }, 1000);
 
+// дз 2.7
 // Задание 1
 let strJs = "js";
 console.log(strJs.toUpperCase());
 
 // Задание 2
 function searchStart(arr, str) {
-  return arr.filter((el) =>
-    el.toLowerCase(str.toLowerCase()).startsWith(str.toLowerCase())
-  );
+  return arr.filter((el) => el.toLowerCase().startsWith(str.toLowerCase()));
 }
 console.log(searchStart(["Кошка", "Кит", "Комар", "Носорог"], "ко"));
 console.log(searchStart(["яблоко", "груша", "гриб", "огурец"], "гру"));
@@ -140,7 +219,16 @@ function fruits() {
 
   let answer1 = prompt(`Какой фрукт был первым?`);
   let answer2 = prompt(`Какой фрукт был последним?`);
-
+  if (
+    answer1 === null ||
+    answer2 === null ||
+    answer1 === "" ||
+    answer2 === ""
+  ) {
+    return alert("Вы ничего не ввели");
+  }
+  answer1 = answer1.toLowerCase();
+  answer2 = answer2.toLowerCase();
   if (
     answer1 === fruitsArr[0].toLowerCase() &&
     answer2 === fruitsArr[fruitsArr.length - 1].toLowerCase()
